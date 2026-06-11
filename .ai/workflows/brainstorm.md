@@ -1,7 +1,7 @@
 # Phase: Brainstorm
 
 Goal: turn a rough feature idea into a validated design document.
-Output: `docs/plans/<feature-slug>/design.md` (in the project)
+Output: `.docs/plans/<feature-slug>/design.md` (in the project)
 Exit gate: user explicitly approves the design.
 
 ## Rules
@@ -49,8 +49,8 @@ Known unknowns, performance/compat concerns, anything deferred.
 
 ## Exit
 
-1. Write the final design to `docs/plans/<feature-slug>/design.md` with `Status: DRAFT`.
+1. Write the final design to `.docs/plans/<feature-slug>/design.md` with `Status: DRAFT`.
 2. Ask: "Approve this design? After approval I'll switch to the Plan phase."
 3. On explicit approval: set `Status: APPROVED`, commit the file
-   (`git add docs/plans/<slug>/design.md && git commit -m "design: <feature>"`),
-   then read `~/.ai/workflows/plan.md` and proceed.
+   (`git add .docs/plans/<slug>/design.md && git commit -m "design: <feature>"`),
+   then read `plan.md` (sibling of this file, in the same workflows folder) and proceed.

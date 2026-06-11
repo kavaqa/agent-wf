@@ -1,7 +1,7 @@
 # Phase: Implement (TDD)
 
 Goal: execute the APPROVED plan task by task, strictly red → green → refactor.
-Input: `docs/plans/<feature-slug>/plan.md` (Status: APPROVED or IN PROGRESS — verify first).
+Input: `.docs/plans/<feature-slug>/plan.md` (Status: APPROVED or IN PROGRESS — verify first).
 Output: working, tested, committed code; all plan tasks checked `[x]`.
 Exit gate: all tasks done, full suite green → switch to Review phase.
 

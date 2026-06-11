@@ -2,8 +2,8 @@
 
 Goal: turn an APPROVED design into a step-by-step implementation plan executable by an engineer
 (or agent session) with zero context beyond the plan itself.
-Input: `docs/plans/<feature-slug>/design.md` (Status: APPROVED — verify this first).
-Output: `docs/plans/<feature-slug>/plan.md`
+Input: `.docs/plans/<feature-slug>/design.md` (Status: APPROVED — verify this first).
+Output: `.docs/plans/<feature-slug>/plan.md`
 Exit gate: user explicitly approves the plan.
 
 ## Rules
@@ -43,8 +43,9 @@ Test command (full suite): <command>
 
 ## Exit
 
-1. Write the plan to `docs/plans/<feature-slug>/plan.md` with `Status: DRAFT`.
+1. Write the plan to `.docs/plans/<feature-slug>/plan.md` with `Status: DRAFT`.
 2. Present a one-line-per-task summary in chat and ask:
    "Approve this plan? After approval I'll switch to the Implement phase (TDD)."
 3. On explicit approval: set `Status: APPROVED`, commit
-   (`git commit -m "plan: <feature>"`), then read `~/.ai/workflows/implement.md` and proceed.
+   (`git commit -m "plan: <feature>"`), then read `implement.md` (sibling of this file, in the
+   same workflows folder) and proceed.

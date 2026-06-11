@@ -3,8 +3,8 @@
 Goal: review the completed implementation against the design and plan with fresh eyes.
 Best run in a NEW agent session (no implementation context) — this substitutes for the
 independent reviewer subagent used in unrestricted environments.
-Input: `docs/plans/<feature-slug>/design.md`, `plan.md` (Status: DONE), and the git history.
-Output: `docs/plans/<feature-slug>/review.md`
+Input: `.docs/plans/<feature-slug>/design.md`, `plan.md` (Status: DONE), and the git history.
+Output: `.docs/plans/<feature-slug>/review.md`
 Exit gate: user accepts the review; any MUST-FIX findings are resolved.
 
 ## Procedure
