@@ -84,3 +84,7 @@ curl -s -H "Authorization: Bearer $GH_TOKEN" -H "User-Agent: mygh-smoke/0.1" \
 {"query":"mutation(\$id:ID!){resolveReviewThread(input:{threadId:\$id}){thread{id isResolved}}}",
  "variables":{"id":"$THREAD_ID"}}
 JSON
+
+
+netsh winhttp show proxy
+Get-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings" | Select ProxyServer, ProxyEnable, AutoConfigURL
