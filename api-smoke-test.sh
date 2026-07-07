@@ -86,5 +86,9 @@ curl -s -H "Authorization: Bearer $GH_TOKEN" -H "User-Agent: mygh-smoke/0.1" \
 JSON
 
 
-netsh winhttp show proxy
-Get-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings" | Select ProxyServer, ProxyEnable, AutoConfigURL
+$cert = Get-ChildItem Cert:\LocalMachine\Root, Cert:\CurrentUser\Root |
+        Where-Object { $_.Subject -match 'Zscaler' } | Select-Object -First 1
+$pem = "-----BEGIN CERTIFICATE-----`n" +
+       [Convert]::ToBase64String($cert.RawData, 'InsertLineBreaks') +
+       "`n-----END CERTIFICATE-----"
+$pem | Out-File -Encoding ascii "$env:USERPROFILE\Downloads\zscaler-root.pem"
